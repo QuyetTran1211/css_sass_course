@@ -18,6 +18,9 @@
   --line: 1px solid var(--color-grey-dark-3);
 }
 
+$bp-largest: 75em; // 1200px /16
+$bp-large: 72.75em; // 1100px /16
+$bp-medium: 59.5em; // 950px
 
 *,
 *::before,
@@ -29,7 +32,11 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 1rem = 10px
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62,5%
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
